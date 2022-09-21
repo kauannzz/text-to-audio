@@ -1,6 +1,4 @@
 from cgitb import text
-from msilib.schema import Error
-from multiprocessing.sharedctypes import Value
 from gtts import gTTS
 
 class textToVoice():
@@ -29,10 +27,10 @@ class textToVoice():
         print('O arquivo foi salvo com sucesso!')
             
         
-select = input('Qual módulo você quer usar?\n(1) Manual\n(2) TXT para voz')
-if select == 1:
+select = input('Qual módulo você quer usar?\n(1) Manual\n(2) TXT para voz\nDigite aqui: ')
+if select == '1':
     textToVoice.manualVoice()
-elif select == 2:
+elif select == '2':
    textToVoice.txtToVoice()
 else:
    print('Você não digitou um número ou escolheu uma opção inválida!')
